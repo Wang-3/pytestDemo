@@ -1,22 +1,22 @@
 pipeline {
-    agent any  
+    agent any 
+
     stages {
-        stage('更新开始') {
-            steps {
-                echo '更新开始'
-    
+        stage('Build') { 
+            steps { 
+                echo 'echo Build stage ...' 
             }
         }
-        stage('build-image') {
+        stage('Test'){
             steps {
-                echo "构建镜像"
+                echo 'echo Test stage ...' 
             }
         }
-        stage('deploy') {
+        stage('Deploy') {
             steps {
-                echo "构建打包"
-                }
+                echo 'echo Deploy stage ...' 
             }
         }
     }
-}
+  }
+
